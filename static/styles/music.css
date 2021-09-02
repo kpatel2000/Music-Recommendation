@@ -1,0 +1,76 @@
+#navbar{
+    background-color:rgb(247, 204, 89);
+    display: flex;
+    position: sticky;
+    
+}
+#navbar h2 {
+    font-size: 2rem;
+    font-family: "Goblin One", cursive;
+    margin-left: 50px;
+    color: black;
+}
+#image{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+}
+#image img{
+    grid-column: 1/3;
+    height: 750px; 
+     width: 1520px;
+  
+}
+.inp{
+    grid-column: 2/-1;
+    display: inline-block;
+    position: absolute;
+    margin-top: 150px;
+    margin-left: 100px;
+    font-size: 200%;
+    width: 1500px;
+    height: 500px;
+    z-index: 1;
+    font-family: 'Anton', sans-serif;
+    overflow: auto;
+}
+#button{
+    margin-left: 60px;
+    margin-top: 25px;
+    margin-bottom: 50px;
+    cursor: pointer;
+    background-color:rgb(3, 3, 3); ;
+    color: rgb(240, 241, 243);
+    border-radius: 35px;
+    /* height: 65px; */
+    padding: 15px;
+    font-size: 80%;
+    font-family: 'Kanit';
+    
+}
+#button:hover{
+    background-color: rgb(238, 255, 0);
+    animation-name: bounce;
+    animation-duration: 3s;
+    color: black;
+    animation-iteration-count: 3;
+  
+}
+#name{
+    font-size: 80%;
+    padding-left: 25px;
+    font-family: 'Anton', sans-serif;
+}
+#song{
+    font-size: 90%;
+    margin-left: 30px;
+    margin-top: 5px;
+    font-family: "lobster";
+}
+#output{
+    font-family: 'Signika';
+    font-weight: bold;   
+}
+#list{
+    font-family: 'Signika';
+    list-style-type: numeric;
+}

@@ -1,0 +1,6 @@
+python==3.9.2
+flask==1.0.3
+numpy
+pandas
+scikit-learn
+gunicorn

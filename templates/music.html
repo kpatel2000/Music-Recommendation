@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static',filename='styles/music.css') }}"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Goblin+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Signika"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+      rel="stylesheet"
+    />
+    <title>Music Recommendation System</title>
+  </head>
+  <body>
+    <nav id="navbar">
+      <h2>Music Recommendation System</h2>
+    </nav>
+    <form action="/recommend" method="POST">
+      <div id="image">
+        <!-- <img src="song.jpg" alt="Music System">    -->
+        <img src="{{url_for('static', filename='song.jpg')}}" />
+        <div class="inp">
+          <label for="name">Song Name : </label>
+          <input type="text" placeholder="Enter song" id="name" name="name" />
+          <div>
+            <input type="submit" value="Recommendations" id="button" />
+          </div>
+          <label for="song"></label>
+            {% for song in lst %}
+              <li id="list"><b>
+                {{song}}
+              </b>
+              </li>
+            {% endfor %}
+            <div id="output">{{pred}}</div>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>
